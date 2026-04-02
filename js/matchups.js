@@ -15,24 +15,28 @@ document.addEventListener('DOMContentLoaded', function() {
   function filterMatchups(filterType) {
     matchupCards.forEach((card, index) => {
       const matchupType = card.getAttribute('data-matchup');
-      
-      // Determine if card should be shown
       const shouldShow = filterType === 'all' || matchupType === filterType;
       
       if (shouldShow) {
-        // Show with smooth animation
+        // Show card with animation
         card.classList.remove('hidden');
+        card.style.display = 'block';
+        card.style.pointerEvents = 'auto';
+        
+        // Trigger reflow to ensure display: block is applied
+        void card.offsetHeight;
+        
+        // Animate in with stagger
         setTimeout(() => {
-          card.style.display = 'block';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0) scale(1)';
-          }, 10);
-        }, index * 50); // Stagger animation
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0) scale(1)';
+        }, index * 50);
       } else {
-        // Hide with smooth animation
+        // Hide card with animation
         card.style.opacity = '0';
         card.style.transform = 'translateY(-10px) scale(0.95)';
+        card.style.pointerEvents = 'none';
+        
         setTimeout(() => {
           card.style.display = 'none';
           card.classList.add('hidden');
@@ -48,30 +52,25 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
       
-      // Remove active state from all buttons
+      // Update active state
       filterBtns.forEach(b => b.classList.remove('active'));
-      
-      // Add active state to clicked button
       this.classList.add('active');
       
-      // Get filter type and apply
+      // Apply filter
       const filter = this.getAttribute('data-filter');
       filterMatchups(filter);
     });
   });
 
   /**
-   * Initialize with all matchups shown
+   * Initialize cards with proper styling and transitions
    */
   matchupCards.forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px) scale(0.95)';
-    
-    setTimeout(() => {
-      card.style.transition = 'all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
-      card.style.opacity = '1';
-      card.style.transform = 'translateY(0) scale(1)';
-    }, index * 100);
+    // Set initial state
+    card.style.display = 'block';
+    card.style.opacity = '1';
+    card.style.transform = 'translateY(0) scale(1)';
+    card.style.transition = 'all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
   });
 
   /**
@@ -96,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   /**
-   * Analytics tracking (console logging for demo)
+   * Analytics tracking
    */
   filterBtns.forEach(btn => {
     btn.addEventListener('click', function() {
