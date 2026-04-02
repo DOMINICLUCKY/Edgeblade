@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EDGEBLADE - Character Gallery" />
+  <title>Gallery | EDGE BLADE</title>
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='90' font-weight='bold' fill='%23ff6347'>⚡</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVIGATION MENU -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="../index.html" style="text-decoration: none; color: inherit;">
+        <span class="logo-icon">⚔️</span> EDGEBLADE
+      </a>
+    </div>
+    <div class="nav-controls">
+      <button class="nav-btn" id="sound-toggle" title="Toggle Sound">🔊</button>
+      <button class="menu-btn" id="menu-btn">
+        <span id="menu-icon">☰</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<menu class="menu-panel">
+  <ul>
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="../index.html#story">STORY</a></li>
+    <li><a href="../index.html#characters">CHARACTERS</a></li>
+    <li><a href="abilities.html">ABILITIES</a></li>
+    <li><a href="matchups.html">MATCHUPS</a></li>
+    <li><a href="stats.html">RANKINGS</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="quiz.html">ELEMENT QUIZ</a></li>
+    <li><a href="team-builder.html">TEAM BUILDER</a></li>
+    <li><a href="lore.html">LORE</a></li>
+  </ul>
+</menu>
+
+<!-- GALLERY PAGE -->
+<section class="page gallery-page">
+  <div class="gallery-container">
+    <h2 class="gallery-title">CHARACTER GALLERY</h2>
+    <p class="section-subtitle">High-resolution artwork and concept designs</p>
+    
+    <!-- Gallery Filters -->
+    <div class="gallery-filter">
+      <button class="gallery-filter-btn active" data-filter="all">ALL CHARACTERS</button>
+      <button class="gallery-filter-btn flame-filter" data-filter="flame">🔥 FLAME ELEMENT</button>
+      <button class="gallery-filter-btn wind-filter" data-filter="wind">🌪️ WIND ELEMENT</button>
+      <button class="gallery-filter-btn shadow-filter" data-filter="shadow">🌑 SHADOW ELEMENT</button>
+    </div>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item" data-character="flame" data-filter="flame">
+        <div class="gallery-image-container flame-bg">
+          <img src="../assets/characters/flame.jpeg" alt="Kael Ignivar - Flame Element" class="gallery-image">
+          <div class="gallery-overlay">
+            <p class="gallery-overlay-text">Click to view fullscreen</p>
+          </div>
+        </div>
+        <div class="element-indicator flame-indicator-small"></div>
+        <h3>Kael Ignivar</h3>
+        <p class="character-title">The Inferno Vanguard</p>
+        <p class="character-element">🔥 Flame Element</p>
+      </div>
+
+      <div class="gallery-item" data-character="wind" data-filter="wind">
+        <div class="gallery-image-container wind-bg">
+          <img src="../assets/characters/wind.jpeg" alt="Aelith Stormborne - Wind Element" class="gallery-image">
+          <div class="gallery-overlay">
+            <p class="gallery-overlay-text">Click to view fullscreen</p>
+          </div>
+        </div>
+        <div class="element-indicator wind-indicator-small"></div>
+        <h3>Aelith Stormborne</h3>
+        <p class="character-title">The Wind Sentinel</p>
+        <p class="character-element">🌪️ Wind Element</p>
+      </div>
+
+      <div class="gallery-item" data-character="shadow" data-filter="shadow">
+        <div class="gallery-image-container shadow-bg">
+          <img src="../assets/characters/shadow.jpeg" alt="Morvyn Shadeveil - Shadow Element" class="gallery-image">
+          <div class="gallery-overlay">
+            <p class="gallery-overlay-text">Click to view fullscreen</p>
+          </div>
+        </div>
+        <div class="element-indicator shadow-indicator-small"></div>
+        <h3>Morvyn Shadeveil</h3>
+        <p class="character-title">The Silent Eclipse</p>
+        <p class="character-element">🌑 Shadow Element</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div class="lightbox-modal" id="lightboxModal">
+  <div class="lightbox-content">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-image" src="" alt="">
+    <div class="lightbox-info">
+      <h3 class="lightbox-title"></h3>
+      <p class="lightbox-description"></p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 EDGEBLADE. All rights reserved. | Premium Experience</p>
+</footer>
+
+<script src="../js/menu.js"></script>
+<script src="../js/gallery-lightbox.js"></script>
+
+</body>
+</html>

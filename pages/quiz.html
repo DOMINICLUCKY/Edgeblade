@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EDGEBLADE - Element Quiz" />
+  <title>Element Quiz | EDGE BLADE</title>
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='90' font-weight='bold' fill='%23ff6347'>⚡</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tweenjs/tween.js@21/dist/tween.umd.js"></script>
+</head>
+<body>
+
+<!-- NAVIGATION MENU -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="../index.html" style="text-decoration: none; color: inherit;">
+        <span class="logo-icon">⚔️</span> EDGEBLADE
+      </a>
+    </div>
+    <div class="nav-controls">
+      <button class="nav-btn" id="sound-toggle" title="Toggle Sound">🔊</button>
+      <button class="menu-btn" id="menu-btn">
+        <span id="menu-icon">☰</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<menu class="menu-panel">
+  <ul>
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="../index.html#story">STORY</a></li>
+    <li><a href="../index.html#characters">CHARACTERS</a></li>
+    <li><a href="abilities.html">ABILITIES</a></li>
+    <li><a href="matchups.html">MATCHUPS</a></li>
+    <li><a href="stats.html">RANKINGS</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="quiz.html">ELEMENT QUIZ</a></li>
+    <li><a href="team-builder.html">TEAM BUILDER</a></li>
+    <li><a href="lore.html">LORE</a></li>
+  </ul>
+</menu>
+
+<!-- ELEMENT QUIZ PAGE -->
+<section class="page quiz-page">
+  <div class="quiz-container">
+    <h2 class="quiz-title">WHICH ELEMENT ARE YOU?</h2>
+    <p class="section-subtitle">Answer 5 questions to discover your warrior path</p>
+    
+    <div id="quiz-content" class="quiz-content">
+      <!-- Quiz will be populated by JavaScript -->
+      <div class="quiz-start">
+        <p>Discover which elemental warrior matches your personality and combat style.</p>
+        <button id="start-quiz-btn" class="start-quiz-btn">BEGIN QUIZ</button>
+      </div>
+    </div>
+
+    <!-- Quiz Result Modal -->
+    <div id="quiz-result-modal" class="modal quiz-modal hidden">
+      <div class="modal-content quiz-result-content">
+        <button class="modal-close" id="quiz-close">&times;</button>
+        <div id="quiz-result-body" class="quiz-result-body">
+          <!-- Result will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 EDGEBLADE. All rights reserved. | Premium Experience</p>
+</footer>
+
+<script src="../js/menu.js"></script>
+<script src="../js/quiz.js"></script>
+
+</body>
+</html>

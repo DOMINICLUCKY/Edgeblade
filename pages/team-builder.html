@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EDGEBLADE - Team Builder" />
+  <title>Team Builder | EDGE BLADE</title>
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='90' font-weight='bold' fill='%23ff6347'>⚡</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tweenjs/tween.js@21/dist/tween.umd.js"></script>
+</head>
+<body>
+
+<!-- NAVIGATION MENU -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="../index.html" style="text-decoration: none; color: inherit;">
+        <span class="logo-icon">⚔️</span> EDGEBLADE
+      </a>
+    </div>
+    <div class="nav-controls">
+      <button class="nav-btn" id="sound-toggle" title="Toggle Sound">🔊</button>
+      <button class="menu-btn" id="menu-btn">
+        <span id="menu-icon">☰</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<menu class="menu-panel">
+  <ul>
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="../index.html#story">STORY</a></li>
+    <li><a href="../index.html#characters">CHARACTERS</a></li>
+    <li><a href="abilities.html">ABILITIES</a></li>
+    <li><a href="matchups.html">MATCHUPS</a></li>
+    <li><a href="stats.html">RANKINGS</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="quiz.html">ELEMENT QUIZ</a></li>
+    <li><a href="team-builder.html">TEAM BUILDER</a></li>
+    <li><a href="lore.html">LORE</a></li>
+  </ul>
+</menu>
+
+<!-- TEAM BUILDER PAGE -->
+<section class="page team-page">
+  <div class="team-container">
+    <h2 class="team-title">TEAM BUILDER</h2>
+    <p class="section-subtitle">Create your ultimate warrior squad. Share your team with others!</p>
+    
+    <div class="team-builder">
+      <div class="team-selector">
+        <h3>Select Warriors for Your Team</h3>
+        <div class="team-options">
+          <div class="team-option" draggable="true" data-character="flame">
+            <span class="team-option-icon">🔥</span>
+            <p>IGNIVAR</p>
+          </div>
+          <div class="team-option" draggable="true" data-character="wind">
+            <span class="team-option-icon">🌪️</span>
+            <p>AELITH</p>
+          </div>
+          <div class="team-option" draggable="true" data-character="shadow">
+            <span class="team-option-icon">🌑</span>
+            <p>MORVYN</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-builder-area">
+        <h3>Your Team (Drag & Drop)</h3>
+        <div id="team-slots" class="team-slots">
+          <div class="team-slot" data-slot="1">Slot 1</div>
+          <div class="team-slot" data-slot="2">Slot 2</div>
+          <div class="team-slot" data-slot="3">Slot 3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-info">
+      <div class="team-matchup-analysis">
+        <h3>Team Analysis</h3>
+        <div id="team-analysis" class="team-analysis-content">
+          <p>Add warriors to your team to see analysis</p>
+        </div>
+      </div>
+
+      <div class="team-actions">
+        <button id="share-team-btn" class="share-btn">📤 Share Team</button>
+        <button id="reset-team-btn" class="reset-btn">🔄 Reset</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 EDGEBLADE. All rights reserved. | Premium Experience</p>
+</footer>
+
+<script src="../js/menu.js"></script>
+<script src="../js/team-builder.js"></script>
+
+</body>
+</html>

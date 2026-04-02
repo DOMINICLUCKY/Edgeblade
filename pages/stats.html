@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EDGEBLADE - Character Rankings and Statistics" />
+  <title>Rankings | EDGE BLADE</title>
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='90' font-weight='bold' fill='%23ff6347'>⚡</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVIGATION MENU -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="../index.html" style="text-decoration: none; color: inherit;">
+        <span class="logo-icon">⚔️</span> EDGEBLADE
+      </a>
+    </div>
+    <div class="nav-controls">
+      <button class="nav-btn" id="sound-toggle" title="Toggle Sound">🔊</button>
+      <button class="menu-btn" id="menu-btn">
+        <span id="menu-icon">☰</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<menu class="menu-panel">
+  <ul>
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="../index.html#story">STORY</a></li>
+    <li><a href="../index.html#characters">CHARACTERS</a></li>
+    <li><a href="abilities.html">ABILITIES</a></li>
+    <li><a href="matchups.html">MATCHUPS</a></li>
+    <li><a href="stats.html">RANKINGS</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="quiz.html">ELEMENT QUIZ</a></li>
+    <li><a href="team-builder.html">TEAM BUILDER</a></li>
+    <li><a href="lore.html">LORE</a></li>
+  </ul>
+</menu>
+
+<!-- CHARACTER STATS/RANKINGS PAGE -->
+<section class="page stats-page">
+  <div class="stats-container">
+    <h2 class="stats-title">CHARACTER RANKINGS</h2>
+    <p class="section-subtitle">Compare warrior statistics and power levels</p>
+    
+    <!-- Element Filter Buttons -->
+    <div class="element-filter">
+      <button class="filter-btn active" data-filter="all">ALL WARRIORS</button>
+      <button class="filter-btn flame-btn" data-filter="flame">🔥 FLAME</button>
+      <button class="filter-btn wind-btn" data-filter="wind">🌪️ WIND</button>
+      <button class="filter-btn shadow-btn" data-filter="shadow">🌑 SHADOW</button>
+    </div>
+    
+    <div class="stats-comparison">
+      <div class="character-stat-card" data-element="flame">
+        <div class="element-indicator flame-indicator"></div>
+        <div class="element-badge flame-badge" title="Flame Element">🔥</div>
+        <h3 class="stat-char-name">🔥 IGNIVAR</h3>
+        <p class="character-element-type">The Inferno Vanguard</p>
+        <div class="stat-bars">
+          <div class="stat-bar">
+            <label>Attack Power</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 95%"></div>
+            </div>
+            <span class="bar-value">95</span>
+          </div>
+          <div class="stat-bar">
+            <label>Defense</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 70%"></div>
+            </div>
+            <span class="bar-value">70</span>
+          </div>
+          <div class="stat-bar">
+            <label>Speed</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 60%"></div>
+            </div>
+            <span class="bar-value">60</span>
+          </div>
+          <div class="stat-bar">
+            <label>Intelligence</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 75%"></div>
+            </div>
+            <span class="bar-value">75</span>
+          </div>
+          <div class="stat-bar">
+            <label>Endurance</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 80%"></div>
+            </div>
+            <span class="bar-value">80</span>
+          </div>
+        </div>
+        <div class="power-level">
+          <span class="power-label">Overall Power</span>
+          <div class="power-meter">
+            <div class="power-bar" style="width: 80%"></div>
+          </div>
+          <span class="power-value">380/500</span>
+        </div>
+      </div>
+
+      <div class="character-stat-card" data-element="wind">
+        <div class="element-indicator wind-indicator"></div>
+        <div class="element-badge wind-badge" title="Wind Element">🌪️</div>
+        <h3 class="stat-char-name">🌪️ AELITH</h3>
+        <p class="character-element-type">The Wind Sentinel</p>
+        <div class="stat-bars">
+          <div class="stat-bar">
+            <label>Attack Power</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 80%"></div>
+            </div>
+            <span class="bar-value">80</span>
+          </div>
+          <div class="stat-bar">
+            <label>Defense</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 65%"></div>
+            </div>
+            <span class="bar-value">65</span>
+          </div>
+          <div class="stat-bar">
+            <label>Speed</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 95%"></div>
+            </div>
+            <span class="bar-value">95</span>
+          </div>
+          <div class="stat-bar">
+            <label>Intelligence</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 90%"></div>
+            </div>
+            <span class="bar-value">90</span>
+          </div>
+          <div class="stat-bar">
+            <label>Endurance</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 75%"></div>
+            </div>
+            <span class="bar-value">75</span>
+          </div>
+        </div>
+        <div class="power-level">
+          <span class="power-label">Overall Power</span>
+          <div class="power-meter">
+            <div class="power-bar" style="width: 81%"></div>
+          </div>
+          <span class="power-value">405/500</span>
+        </div>
+      </div>
+
+      <div class="character-stat-card" data-element="shadow">
+        <div class="element-indicator shadow-indicator"></div>
+        <div class="element-badge shadow-badge" title="Shadow Element">🌑</div>
+        <h3 class="stat-char-name">🌑 MORVYN</h3>
+        <p class="character-element-type">The Silent Eclipse</p>
+        <div class="stat-bars">
+          <div class="stat-bar">
+            <label>Attack Power</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 85%"></div>
+            </div>
+            <span class="bar-value">85</span>
+          </div>
+          <div class="stat-bar">
+            <label>Defense</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 85%"></div>
+            </div>
+            <span class="bar-value">85</span>
+          </div>
+          <div class="stat-bar">
+            <label>Speed</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 88%"></div>
+            </div>
+            <span class="bar-value">88</span>
+          </div>
+          <div class="stat-bar">
+            <label>Intelligence</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 92%"></div>
+            </div>
+            <span class="bar-value">92</span>
+          </div>
+          <div class="stat-bar">
+            <label>Endurance</label>
+            <div class="bar-container">
+              <div class="bar-fill" style="width: 70%"></div>
+            </div>
+            <span class="bar-value">70</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tier List -->
+    <div class="tier-list">
+      <h3>TIER LIST</h3>
+      <div class="tier-container">
+        <div class="tier s-tier">
+          <span class="tier-label">S+</span>
+          <div class="tier-characters">
+            <div class="tier-char morvyn">MORVYN</div>
+          </div>
+        </div>
+        <div class="tier a-tier">
+          <span class="tier-label">A</span>
+          <div class="tier-characters">
+            <div class="tier-char ignivar">IGNIVAR</div>
+            <div class="tier-char aelith">AELITH</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 EDGEBLADE. All rights reserved. | Premium Experience</p>
+</footer>
+
+<script src="../js/menu.js"></script>
+<script src="../js/gallery-lightbox.js"></script>
+
+</body>
+</html>

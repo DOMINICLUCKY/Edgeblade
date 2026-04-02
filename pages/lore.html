@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EDGEBLADE - Lore Database" />
+  <title>Lore | EDGE BLADE</title>
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='90' font-weight='bold' fill='%23ff6347'>⚡</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVIGATION MENU -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="../index.html" style="text-decoration: none; color: inherit;">
+        <span class="logo-icon">⚔️</span> EDGEBLADE
+      </a>
+    </div>
+    <div class="nav-controls">
+      <button class="nav-btn" id="sound-toggle" title="Toggle Sound">🔊</button>
+      <button class="menu-btn" id="menu-btn">
+        <span id="menu-icon">☰</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<menu class="menu-panel">
+  <ul>
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="../index.html#story">STORY</a></li>
+    <li><a href="../index.html#characters">CHARACTERS</a></li>
+    <li><a href="abilities.html">ABILITIES</a></li>
+    <li><a href="matchups.html">MATCHUPS</a></li>
+    <li><a href="stats.html">RANKINGS</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="quiz.html">ELEMENT QUIZ</a></li>
+    <li><a href="team-builder.html">TEAM BUILDER</a></li>
+    <li><a href="lore.html">LORE</a></li>
+  </ul>
+</menu>
+
+<!-- LORE DATABASE PAGE -->
+<section class="page lore-page">
+  <div class="lore-container">
+    <h2 class="lore-title">LORE DATABASE</h2>
+    <p class="section-subtitle">Dive into the rich history of Vayrion</p>
+    
+    <div class="lore-tabs">
+      <button class="lore-tab active" data-tab="world">🌍 World</button>
+      <button class="lore-tab" data-tab="origins">⚔️ Origins</button>
+      <button class="lore-tab" data-tab="conflicts">⚡ Conflicts</button>
+      <button class="lore-tab" data-tab="prophecy">🔮 Prophecy</button>
+    </div>
+
+    <div class="lore-content">
+      <!-- World Tab -->
+      <div id="world-content" class="lore-section active">
+        <h3>The World of Vayrion</h3>
+        <p>Vayrion is a realm shattered by elemental forces, existing in three interdependent dominions bound by ancient magic. Each dominion represents a fundamental aspect of existence itself.</p>
+        <p><strong>The Flame Dominion:</strong> A volcanic landscape where power is forged through destruction and rebirth. Home to warriors who harness pure, chaotic energy.</p>
+        <p><strong>The Wind Dominion:</strong> Swift plains where thought becomes action in a heartbeat. Warriors here master precision and adaptability.</p>
+        <p><strong>The Shadow Dominion:</strong> Void valleys between dimensions, where truth becomes subjective and strategy reigns supreme.</p>
+      </div>
+
+      <!-- Origins Tab -->
+      <div id="origins-content" class="lore-section">
+        <h3>The Origins</h3>
+        <p>Before recorded time, three Primordial Forces shaped Vayrion: the Eternal Flame, the Endless Wind, and the Infinite Shadow. Their conflict birthed all matter and life.</p>
+        <p>When mortals began to exist, they absorbed fragments of these primordial essences, becoming living conduits of elemental power. The greatest among them became warriors—legends passed down through generations.</p>
+      </div>
+
+      <!-- Conflicts Tab -->
+      <div id="conflicts-content" class="lore-section">
+        <h3>The Eternal Conflicts</h3>
+        <p>The cycles of conflict between the three dominions have shaped history. Each warrior represents not just personal power, but the ambitions and philosophies of their entire realm.</p>
+        <p>Every battle rewrites destiny. Every warrior's choice echoes across timelines. The balance between Flame, Wind, and Shadow is fragile—one warrior can tip the scales.</p>
+      </div>
+
+      <!-- Prophecy Tab -->
+      <div id="prophecy-content" class="lore-section">
+        <h3>The Prophecy of Balance</h3>
+        <p>Ancient texts foretell of a time when three warriors of unmatched power will unite. Neither flame nor wind nor shadow will dominate—only harmony.</p>
+        <p>Some believe this prophecy is a path to salvation. Others see it as a curse. Regardless, the three greatest warriors of Vayrion march toward their destined encounter...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 EDGEBLADE. All rights reserved. | Premium Experience</p>
+</footer>
+
+<script src="../js/menu.js"></script>
+<script src="../js/lore.js"></script>
+
+</body>
+</html>

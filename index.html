@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="EDGEBLADE - An epic anime experience with elemental warriors. Explore interactive 3D characters and immersive storytelling." />
+<meta name="theme-color" content="#0a0a1a" />
+<meta name="keywords" content="anime, 3D, interactive, elemental warriors, gaming" />
+<title>EDGE BLADE | Anime Experience</title>
+
+<!-- Favicon with fallback -->
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='90' font-weight='bold' fill='%23ff6347'>⚡</text></svg>" />
+
+<!-- Preload critical resources -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" />
+<link rel="preload" href="./assets/backgrounds/flamefog.png" as="image" />
+<link rel="preload" href="./assets/backgrounds/windfog.png" as="image" />
+<link rel="preload" href="./assets/backgrounds/shadowfog.png" as="image" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+<link rel="stylesheet" href="./style.css" />
+
+<!-- Google Fonts with font-display: swap for better performance -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Lenis CDN - Smooth Scroll -->
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+<!-- TWEEN.js - Animation Library -->
+<script src="https://cdn.jsdelivr.net/npm/@tweenjs/tween.js@21/dist/tween.umd.js"></script>
+
+<!-- Import Map for Module Resolution -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/": "https://cdn.jsdelivr.net/npm/three@0.160.0/"
+  }
+}
+</script>
+
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen" class="loading-screen">
+  <div class="loading-content">
+    <div class="loading-spinner"></div>
+    <p class="loading-text">Initializing EDGEBLADE...</p>
+  </div>
+</div>
+
+<!-- Performance Monitor (Dev Mode) -->
+<div id="perf-monitor" class="perf-monitor hidden">
+  <div class="perf-item">FPS: <span id="fps">60</span></div>
+  <div class="perf-item">Mem: <span id="mem">0</span>MB</div>
+  <div class="perf-item">GPU: <span id="gpu">Ready</span></div>
+</div>
+
+<!-- NAVIGATION MENU -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <span class="logo-icon">⚔️</span> EDGEBLADE
+    </div>
+    <div class="nav-controls">
+      <!-- Performance Toggle -->
+      <button class="nav-btn" id="perf-toggle" title="Toggle Performance Monitor">📊</button>
+      <!-- Sound Toggle -->
+      <button class="nav-btn" id="sound-toggle" title="Toggle Sound">🔊</button>
+      <!-- Menu Button -->
+      <button class="menu-btn" id="menu-btn">
+        <span id="menu-icon">☰</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<menu class="menu-panel">
+  <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="index.html#story">STORY</a></li>
+    <li><a href="index.html#characters">CHARACTERS</a></li>
+    <li><a href="pages/abilities.html">ABILITIES</a></li>
+    <li><a href="pages/matchups.html">MATCHUPS</a></li>
+    <li><a href="pages/stats.html">RANKINGS</a></li>
+    <li><a href="pages/gallery.html">GALLERY</a></li>
+    <li><a href="pages/quiz.html">ELEMENT QUIZ</a></li>
+    <li><a href="pages/team-builder.html">TEAM BUILDER</a></li>
+    <li><a href="pages/lore.html">LORE</a></li>
+  </ul>
+</menu>
+
+<!-- HOME PAGE -->
+<section id="home" class="page home-page">
+  <canvas id="webgl"></canvas>
+  <div class="home-overlay"></div>
+  
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1 class="hero-title">EDGEBLADE</h1>
+      <p class="hero-tagline">Awaken the Elemental Warriors</p>
+      
+      <p class="hero-description">
+        In a fractured realm ruled by ancient elements,<br>
+        warriors rise to reclaim balance.
+      </p>
+      
+      <div class="cta-buttons">
+        <button class="cta-btn primary">Enter the Realm</button>
+        <button class="cta-btn secondary">Explore Characters</button>
+        <button class="cta-btn tertiary" id="teaser-btn">Watch Teaser</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY PAGE -->
+<section id="story" class="page story-page">
+  <div class="story-container">
+    <h2 class="story-title">THE WORLD OF VAYRION</h2>
+    
+    <div class="world-lore">
+      <p>
+        The world of Vayrion is split into three elemental dominions:
+        <span class="highlight">Flame. Wind. Shadow.</span>
+      </p>
+      <p>
+        Each realm exists in eternal conflict, each warrior bound to their element's ancient power.
+      </p>
+    </div>
+
+    <!-- ELEMENT BREAKDOWN -->
+    <div class="elements-section">
+      <!-- Flame -->
+      <div class="element-card flame-card">
+        <div class="element-bg"></div>
+        <div class="element-content">
+          <div class="element-header">
+            <h3>🔥 Flame Dominion</h3>
+          </div>
+          <div class="traits">
+            <p>• Power</p>
+            <p>• Aggression</p>
+            <p>• Rebirth through destruction</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wind -->
+      <div class="element-card wind-card">
+        <div class="element-bg"></div>
+        <div class="element-content">
+          <div class="element-header">
+            <h3>🌪 Wind Dominion</h3>
+          </div>
+          <div class="traits">
+            <p>• Speed</p>
+            <p>• Freedom</p>
+            <p>• Tactical intelligence</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shadow -->
+      <div class="element-card shadow-card">
+        <div class="element-bg"></div>
+        <div class="element-content">
+          <div class="element-header">
+            <h3>🌑 Shadow Dominion</h3>
+          </div>
+          <div class="traits">
+            <p>• Stealth</p>
+            <p>• Strategy</p>
+            <p>• Silent dominance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHARACTERS PAGE -->
+<section id="characters" class="page characters-page">
+  <div class="characters-container">
+    <h2 class="characters-title">ELEMENTAL WARRIORS</h2>
+    
+    <!-- CHARACTER SELECTOR -->
+    <div class="character-selector">
+      <button class="char-btn active" data-character="flame">🔥 Flame</button>
+      <button class="char-btn" data-character="wind">🌪 Wind</button>
+      <button class="char-btn" data-character="shadow">🌑 Shadow</button>
+    </div>
+
+    <div class="characters-content">
+      <!-- Dynamic Background -->
+      <div class="character-bg-layer" id="char-bg-layer"></div>
+      
+      <!-- 3D Model Canvas - Full Surface -->
+      <div class="character-model-section" id="char-model-bg">
+        <canvas id="character-webgl"></canvas>
+        <div class="char-loading" id="char-loading">
+          <div class="mini-spinner"></div>
+          <p>Loading Character...</p>
+        </div>
+        <div class="zoom-controls">
+          <div class="zoom-hint">🖱️ Scroll / Drag to interact</div>
+        </div>
+      </div>
+
+      <!-- Character Bio Panel - Overlay -->
+      <div class="character-bio">
+        <div class="bio-header">
+          <h3 id="char-name">Kael Ignivar</h3>
+          <p id="char-title" class="char-title">The Ember Warden</p>
+          <!-- Speech Bubble -->
+          <div class="speech-bubble hidden" id="speech-bubble">
+            <p id="speech-text"></p>
+            <div class="speech-indicator"></div>
+          </div>
+          <!-- Voice Tagline -->
+          <button class="voice-btn" id="voice-btn" title="Listen to voice tagline">
+            <span class="voice-icon">🔊</span>
+            <span id="voice-text">Hear Their Call</span>
+          </button>
+        </div>
+        <p id="char-description" class="char-description">A warrior born from the eternal flames. Kael harnesses destructive power and eternal rebirth.</p>
+        
+        <div class="char-stats">
+          <div class="stat">
+            <span class="stat-label">Weapon:</span>
+            <span id="char-weapon" class="stat-value">Twin Ignition Blades</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Ability:</span>
+            <span id="char-ability" class="stat-value">Phoenix Burst</span>
+          </div>
+        </div>
+
+        <!-- Favorite Button -->
+        <button class="fav-btn" id="fav-btn" title="Add to Favorites">♡ Favorite</button>
+        
+        <!-- Story Button -->
+        <button class="story-btn" id="story-btn" title="Read Character Story">📖 Read Story</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHARACTER STORY MODAL -->
+<div id="story-modal" class="modal story-modal hidden">
+  <div class="story-modal-content">
+    <button class="modal-close" id="story-modal-close">&times;</button>
+    <div class="story-modal-body">
+      <div class="story-header">
+        <h2 id="story-char-name" class="story-title">Character Name</h2>
+        <p id="story-char-role" class="story-subtitle">Role</p>
+        <div id="story-char-emoji" style="font-size: 3rem; margin: 10px 0;">⚔️</div>
+      </div>
+      <div class="story-content">
+        <div class="story-metadata">
+          <div class="meta-item">
+            <span class="meta-label">Weapon:</span>
+            <span id="story-weapon" class="meta-value">—</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Ability:</span>
+            <span id="story-ability" class="meta-value">—</span>
+          </div>
+        </div>
+        <div class="story-text" id="story-text">
+          <!-- Story content will be inserted here -->
+        </div>
+        <div class="story-footer">
+          <p class="story-quote" id="story-quote"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TEASER VIDEO MODAL -->
+<div id="teaser-modal" class="modal hidden">
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <div class="modal-body">
+      <h2>EDGEBLADE Teaser</h2>
+      <p>Teaser video coming soon...</p>
+      <div class="placeholder-video">
+        <p>Video Player Here</p>
+      </div>
+    </div>
+  
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 EDGEBLADE. All rights reserved. | Premium Experience</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script type="module" src="./main.js"></script>
+<script type="module" src="./js/menu.js"></script>
+
+<!-- TEST SUITE - Uncomment to run diagnostics -->
+<!-- <script defer src="./test-site.js"></script> -->
+
+</body>
+</html>
+
+
+<!-- MODERN UI ENHANCEMENTS - PHASE 7 -->
+<!-- Visual Enhancement: Decorative Elements -->
+<style>
+  /* Animated background elements */
+  .bg-element {
+    position: fixed;
+    pointer-events: none;
+    opacity: 0.03;
+    z-index: 0;
+  }
+
+  .element-flame {
+    bottom: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #ff6347 0%, transparent 70%);
+    animation: float-slow 20s ease-in-out infinite;
+  }
+
+  .element-wind {
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #4db8ff 0%, transparent 70%);
+    animation: float-slow-reverse 25s ease-in-out infinite;
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    50% { transform: translateY(30px) translateX(20px); }
+  }
+
+  @keyframes float-slow-reverse {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    50% { transform: translateY(-30px) translateX(-20px); }
+  }
+</style>
+
+<div class='bg-element element-flame'></div>
+<div class='bg-element element-wind'></div>
+

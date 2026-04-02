@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EDGEBLADE - Element Matchups and Advantages" />
+  <title>Matchups | EDGE BLADE</title>
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='90' font-weight='bold' fill='%23ff6347'>⚡</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVIGATION MENU -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="../index.html" style="text-decoration: none; color: inherit;">
+        <span class="logo-icon">⚔️</span> EDGEBLADE
+      </a>
+    </div>
+    <div class="nav-controls">
+      <button class="nav-btn" id="sound-toggle" title="Toggle Sound">🔊</button>
+      <button class="menu-btn" id="menu-btn">
+        <span id="menu-icon">☰</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<menu class="menu-panel">
+  <ul>
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="../index.html#story">STORY</a></li>
+    <li><a href="../index.html#characters">CHARACTERS</a></li>
+    <li><a href="abilities.html">ABILITIES</a></li>
+    <li><a href="matchups.html">MATCHUPS</a></li>
+    <li><a href="stats.html">RANKINGS</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="quiz.html">ELEMENT QUIZ</a></li>
+    <li><a href="team-builder.html">TEAM BUILDER</a></li>
+    <li><a href="lore.html">LORE</a></li>
+  </ul>
+</menu>
+
+<!-- ELEMENT MATCHUPS PAGE -->
+<section class="page matchups-page">
+  <div class="matchups-container">
+    <h2 class="matchups-title">ELEMENT MATCHUPS</h2>
+    <p class="section-subtitle">Discover favorable and unfavorable elemental combinations</p>
+    
+    <div class="matchups-grid">
+      <div class="matchup-card">
+        <div class="matchup-vs">
+          <div class="element-indicator flame">🔥 Flame</div>
+          <span class="vs-text">vs</span>
+          <div class="element-indicator wind">🌪️ Wind</div>
+        </div>
+        <div class="matchup-result favorable">
+          <p><strong>Flame Advantage:</strong> Fire feeds on oxygen, spreads through wind.</p>
+          <p class="matchup-desc">Ignition deals +20% damage to Wind warriors</p>
+        </div>
+      </div>
+
+      <div class="matchup-card">
+        <div class="matchup-vs">
+          <div class="element-indicator wind">🌪️ Wind</div>
+          <span class="vs-text">vs</span>
+          <div class="element-indicator shadow">🌑 Shadow</div>
+        </div>
+        <div class="matchup-result favorable">
+          <p><strong>Wind Advantage:</strong> Swift strikes pierce through darkness.</p>
+          <p class="matchup-desc">Speed bonus against Shadow warriors</p>
+        </div>
+      </div>
+
+      <div class="matchup-card">
+        <div class="matchup-vs">
+          <div class="element-indicator shadow">🌑 Shadow</div>
+          <span class="vs-text">vs</span>
+          <div class="element-indicator flame">🔥 Flame</div>
+        </div>
+        <div class="matchup-result favorable">
+          <p><strong>Shadow Advantage:</strong> Darkness extinguishes light.</p>
+          <p class="matchup-desc">Silencing effects paralyze Fire warriors</p>
+        </div>
+      </div>
+
+      <div class="matchup-card">
+        <div class="matchup-vs">
+          <div class="element-indicator flame">🔥 Flame</div>
+          <span class="vs-text">vs</span>
+          <div class="element-indicator shadow">🌑 Shadow</div>
+        </div>
+        <div class="matchup-result unfavorable">
+          <p><strong>Shadow Resistance:</strong> Darkness swallows flames.</p>
+          <p class="matchup-desc">Shadow warriors resist -15% flame damage</p>
+        </div>
+      </div>
+
+      <div class="matchup-card">
+        <div class="matchup-vs">
+          <div class="element-indicator wind">🌪️ Wind</div>
+          <span class="vs-text">vs</span>
+          <div class="element-indicator flame">🔥 Flame</div>
+        </div>
+        <div class="matchup-result unfavorable">
+          <p><strong>Flame Resistance:</strong> Heat strengthens infernos.</p>
+          <p class="matchup-desc">Wind attacks weakened against Fire warriors</p>
+        </div>
+      </div>
+
+      <div class="matchup-card">
+        <div class="matchup-vs">
+          <div class="element-indicator shadow">🌑 Shadow</div>
+          <span class="vs-text">vs</span>
+          <div class="element-indicator wind">🌪️ Wind</div>
+        </div>
+        <div class="matchup-result unfavorable">
+          <p><strong>Wind Resistance:</strong> Movement breaks shadow bonds.</p>
+          <p class="matchup-desc">Wind warriors evade Shadow attacks more easily</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 EDGEBLADE. All rights reserved. | Premium Experience</p>
+</footer>
+
+<script src="../js/menu.js"></script>
+
+</body>
+</html>
