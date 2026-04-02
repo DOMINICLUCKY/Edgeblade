@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="EDGEBLADE - Element Matchups and Advantages" />
+  <meta name="description" content="EDGEBLADE - Element Matchups Analysis" />
   <title>Matchups | EDGE BLADE</title>
   <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='90' font-weight='bold' fill='%23ff6347'>⚡</text></svg>" />
   <link rel="stylesheet" href="../style.css" />
@@ -43,130 +43,345 @@
   </ul>
 </menu>
 
-<!-- ELEMENT MATCHUPS PAGE -->
+<!-- MATCHUPS PAGE -->
 <section class="page matchups-page">
   <div class="matchups-container">
-    <div class="matchups-header">
-      <h2 class="matchups-title">ELEMENT MATCHUPS</h2>
-      <p class="section-subtitle">Discover favorable and unfavorable elemental combinations</p>
-    </div>
-
-    <!-- MATCHUP FILTERS -->
-    <div class="matchup-filters">
-      <button class="matchup-filter-btn active" data-filter="all">
-        <span class="filter-icon">⚔️</span> All Matchups
-      </button>
-      <button class="matchup-filter-btn" data-filter="favorable">
-        <span class="filter-icon">✅</span> Favorable Only
-      </button>
-      <button class="matchup-filter-btn" data-filter="unfavorable">
-        <span class="filter-icon">❌</span> Unfavorable Only
-      </button>
-    </div>
+    <h2 class="matchups-title">ELEMENT MATCHUPS</h2>
+    <p class="section-subtitle">Strategic advantage analysis between elemental warriors</p>
     
-    <div class="matchups-grid">
-      <div class="matchup-card" data-matchup="favorable">
-        <div class="matchup-badge favorable-badge">✅ FAVORABLE</div>
-        <div class="matchup-vs">
-          <div class="element-indicator flame">🔥 Flame</div>
-          <span class="vs-text">vs</span>
-          <div class="element-indicator wind">🌪️ Wind</div>
-        </div>
-        <div class="matchup-result favorable">
-          <p><strong>Flame Advantage:</strong> Fire feeds on oxygen, spreads through wind.</p>
-          <p class="matchup-desc">Ignition deals +20% damage to Wind warriors</p>
-          <div class="advantage-indicator">
-            <span class="advantage-label">Advantage:</span>
-            <span class="advantage-value">+20%</span>
+    <!-- MATCHUP CATEGORY FILTERS -->
+    <div class="matchup-category-filters">
+      <button class="category-btn active" data-category="all">
+        <span class="cat-icon">⚔️</span> All Matchups
+      </button>
+      <button class="category-btn" data-category="favorable">
+        <span class="cat-icon">✅</span> Winning Matchups
+      </button>
+      <button class="category-btn" data-category="unfavorable">
+        <span class="cat-icon">❌</span> Losing Matchups
+      </button>
+    </div>
+
+    <!-- MATCHUP COMPARISON GRID -->
+    <div class="matchups-comparison-grid">
+      
+      <!-- FLAME VS WIND -->
+      <div class="matchup-comparison-card" data-category="favorable">
+        <div class="comparison-header">
+          <div class="attacker-side">
+            <div class="element-combo-badge flame-combo">🔥</div>
+            <h3>Flame</h3>
+            <p class="combo-name">Ignition Master</p>
           </div>
+          <div class="vs-separator">⚔️ VS ⚔️</div>
+          <div class="defender-side">
+            <div class="element-combo-badge wind-combo">🌪️</div>
+            <h3>Wind</h3>
+            <p class="combo-name">Swift Striker</p>
+          </div>
+        </div>
+
+        <div class="comparison-body">
+          <div class="advantage-section">
+            <h4>Advantage</h4>
+            <p class="advantage-title">Fire Feeds on Air</p>
+            <p class="advantage-desc">Flame spreads through wind currents, intensifying the inferno.</p>
+            
+            <div class="stat-comparison">
+              <div class="stat-item">
+                <span class="stat-label">Damage Boost</span>
+                <div class="stat-bar">
+                  <div class="stat-fill" style="width: 75%;"></div>
+                </div>
+                <span class="stat-value">+20%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ability-list">
+            <h4>Key Advantages</h4>
+            <ul>
+              <li>• Sustained heat damage</li>
+              <li>• Wind amplifies flames</li>
+              <li>• Extended burn effects</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comparison-footer">
+          <span class="result-badge favorable-result">FAVORABLE</span>
+          <span class="matchup-odds">65% Win Rate</span>
         </div>
       </div>
 
-      <div class="matchup-card" data-matchup="favorable">
-        <div class="matchup-badge favorable-badge">✅ FAVORABLE</div>
-        <div class="matchup-vs">
-          <div class="element-indicator wind">🌪️ Wind</div>
-          <span class="vs-text">vs</span>
-          <div class="element-indicator shadow">🌑 Shadow</div>
-        </div>
-        <div class="matchup-result favorable">
-          <p><strong>Wind Advantage:</strong> Swift strikes pierce through darkness.</p>
-          <p class="matchup-desc">Speed bonus against Shadow warriors</p>
-          <div class="advantage-indicator">
-            <span class="advantage-label">Advantage:</span>
-            <span class="advantage-value">+15%</span>
+      <!-- WIND VS SHADOW -->
+      <div class="matchup-comparison-card" data-category="favorable">
+        <div class="comparison-header">
+          <div class="attacker-side">
+            <div class="element-combo-badge wind-combo">🌪️</div>
+            <h3>Wind</h3>
+            <p class="combo-name">Swift Striker</p>
           </div>
+          <div class="vs-separator">⚔️ VS ⚔️</div>
+          <div class="defender-side">
+            <div class="element-combo-badge shadow-combo">🌑</div>
+            <h3>Shadow</h3>
+            <p class="combo-name">Dark Assassin</p>
+          </div>
+        </div>
+
+        <div class="comparison-body">
+          <div class="advantage-section">
+            <h4>Advantage</h4>
+            <p class="advantage-title">Speed Pierces Darkness</p>
+            <p class="advantage-desc">Swift wind strikes cannot be dodged by shadow techniques.</p>
+            
+            <div class="stat-comparison">
+              <div class="stat-item">
+                <span class="stat-label">Attack Speed</span>
+                <div class="stat-bar">
+                  <div class="stat-fill" style="width: 70%;"></div>
+                </div>
+                <span class="stat-value">+15%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ability-list">
+            <h4>Key Advantages</h4>
+            <ul>
+              <li>• Superior mobility</li>
+              <li>• Evasion counters shadow</li>
+              <li>• Quick repositioning</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comparison-footer">
+          <span class="result-badge favorable-result">FAVORABLE</span>
+          <span class="matchup-odds">60% Win Rate</span>
         </div>
       </div>
 
-      <div class="matchup-card" data-matchup="favorable">
-        <div class="matchup-badge favorable-badge">✅ FAVORABLE</div>
-        <div class="matchup-vs">
-          <div class="element-indicator shadow">🌑 Shadow</div>
-          <span class="vs-text">vs</span>
-          <div class="element-indicator flame">🔥 Flame</div>
-        </div>
-        <div class="matchup-result favorable">
-          <p><strong>Shadow Advantage:</strong> Darkness extinguishes light.</p>
-          <p class="matchup-desc">Silencing effects paralyze Fire warriors</p>
-          <div class="advantage-indicator">
-            <span class="advantage-label">Advantage:</span>
-            <span class="advantage-value">+25%</span>
+      <!-- SHADOW VS FLAME -->
+      <div class="matchup-comparison-card" data-category="favorable">
+        <div class="comparison-header">
+          <div class="attacker-side">
+            <div class="element-combo-badge shadow-combo">🌑</div>
+            <h3>Shadow</h3>
+            <p class="combo-name">Dark Assassin</p>
           </div>
+          <div class="vs-separator">⚔️ VS ⚔️</div>
+          <div class="defender-side">
+            <div class="element-combo-badge flame-combo">🔥</div>
+            <h3>Flame</h3>
+            <p class="combo-name">Ignition Master</p>
+          </div>
+        </div>
+
+        <div class="comparison-body">
+          <div class="advantage-section">
+            <h4>Advantage</h4>
+            <p class="advantage-title">Darkness Extinguishes Light</p>
+            <p class="advantage-desc">Shadow envelops and suffocates flames, reducing their power.</p>
+            
+            <div class="stat-comparison">
+              <div class="stat-item">
+                <span class="stat-label">Defense Boost</span>
+                <div class="stat-bar">
+                  <div class="stat-fill" style="width: 85%;"></div>
+                </div>
+                <span class="stat-value">+25%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ability-list">
+            <h4>Key Advantages</h4>
+            <ul>
+              <li>• Stealth advantage</li>
+              <li>• Silence effects</li>
+              <li>• Armor penetration</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comparison-footer">
+          <span class="result-badge favorable-result">FAVORABLE</span>
+          <span class="matchup-odds">70% Win Rate</span>
         </div>
       </div>
 
-      <div class="matchup-card" data-matchup="unfavorable">
-        <div class="matchup-badge unfavorable-badge">❌ UNFAVORABLE</div>
-        <div class="matchup-vs">
-          <div class="element-indicator flame">🔥 Flame</div>
-          <span class="vs-text">vs</span>
-          <div class="element-indicator shadow">🌑 Shadow</div>
-        </div>
-        <div class="matchup-result unfavorable">
-          <p><strong>Shadow Resistance:</strong> Darkness swallows flames.</p>
-          <p class="matchup-desc">Shadow warriors resist -15% flame damage</p>
-          <div class="advantage-indicator">
-            <span class="advantage-label">Disadvantage:</span>
-            <span class="advantage-value">-15%</span>
+      <!-- FLAME VS SHADOW (Unfavorable) -->
+      <div class="matchup-comparison-card" data-category="unfavorable">
+        <div class="comparison-header">
+          <div class="attacker-side">
+            <div class="element-combo-badge flame-combo">🔥</div>
+            <h3>Flame</h3>
+            <p class="combo-name">Ignition Master</p>
           </div>
+          <div class="vs-separator">⚔️ VS ⚔️</div>
+          <div class="defender-side">
+            <div class="element-combo-badge shadow-combo">🌑</div>
+            <h3>Shadow</h3>
+            <p class="combo-name">Dark Assassin</p>
+          </div>
+        </div>
+
+        <div class="comparison-body">
+          <div class="disadvantage-section">
+            <h4>Disadvantage</h4>
+            <p class="disadvantage-title">Light Cannot Touch Darkness</p>
+            <p class="disadvantage-desc">Flames are absorbed and negated by shadow resistance.</p>
+            
+            <div class="stat-comparison">
+              <div class="stat-item">
+                <span class="stat-label">Defense Penalty</span>
+                <div class="stat-bar">
+                  <div class="stat-fill" style="width: 45%;"></div>
+                </div>
+                <span class="stat-value">-15%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ability-list">
+            <h4>Key Disadvantages</h4>
+            <ul>
+              <li>• Reduced fire damage</li>
+              <li>• Shadow resistance active</li>
+              <li>• Cooldown extensions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comparison-footer">
+          <span class="result-badge unfavorable-result">UNFAVORABLE</span>
+          <span class="matchup-odds">35% Win Rate</span>
         </div>
       </div>
 
-      <div class="matchup-card" data-matchup="unfavorable">
-        <div class="matchup-badge unfavorable-badge">❌ UNFAVORABLE</div>
-        <div class="matchup-vs">
-          <div class="element-indicator wind">🌪️ Wind</div>
-          <span class="vs-text">vs</span>
-          <div class="element-indicator flame">🔥 Flame</div>
-        </div>
-        <div class="matchup-result unfavorable">
-          <p><strong>Flame Resistance:</strong> Heat strengthens infernos.</p>
-          <p class="matchup-desc">Wind attacks weakened against Fire warriors</p>
-          <div class="advantage-indicator">
-            <span class="advantage-label">Disadvantage:</span>
-            <span class="advantage-value">-20%</span>
+      <!-- WIND VS FLAME (Unfavorable) -->
+      <div class="matchup-comparison-card" data-category="unfavorable">
+        <div class="comparison-header">
+          <div class="attacker-side">
+            <div class="element-combo-badge wind-combo">🌪️</div>
+            <h3>Wind</h3>
+            <p class="combo-name">Swift Striker</p>
           </div>
+          <div class="vs-separator">⚔️ VS ⚔️</div>
+          <div class="defender-side">
+            <div class="element-combo-badge flame-combo">🔥</div>
+            <h3>Flame</h3>
+            <p class="combo-name">Ignition Master</p>
+          </div>
+        </div>
+
+        <div class="comparison-body">
+          <div class="disadvantage-section">
+            <h4>Disadvantage</h4>
+            <p class="disadvantage-title">Air Fuels Fire</p>
+            <p class="disadvantage-desc">Wind attacks strengthen flames instead of weakening them.</p>
+            
+            <div class="stat-comparison">
+              <div class="stat-item">
+                <span class="stat-label">Attack Penalty</span>
+                <div class="stat-bar">
+                  <div class="stat-fill" style="width: 40%;"></div>
+                </div>
+                <span class="stat-value">-20%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ability-list">
+            <h4>Key Disadvantages</h4>
+            <ul>
+              <li>• Attacks backfire</li>
+              <li>• Reduced mobility</li>
+              <li>• Healing reversal</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comparison-footer">
+          <span class="result-badge unfavorable-result">UNFAVORABLE</span>
+          <span class="matchup-odds">40% Win Rate</span>
         </div>
       </div>
 
-      <div class="matchup-card" data-matchup="unfavorable">
-        <div class="matchup-badge unfavorable-badge">❌ UNFAVORABLE</div>
-        <div class="matchup-vs">
-          <div class="element-indicator shadow">🌑 Shadow</div>
-          <span class="vs-text">vs</span>
-          <div class="element-indicator wind">🌪️ Wind</div>
+      <!-- SHADOW VS WIND (Unfavorable) -->
+      <div class="matchup-comparison-card" data-category="unfavorable">
+        <div class="comparison-header">
+          <div class="attacker-side">
+            <div class="element-combo-badge shadow-combo">🌑</div>
+            <h3>Shadow</h3>
+            <p class="combo-name">Dark Assassin</p>
+          </div>
+          <div class="vs-separator">⚔️ VS ⚔️</div>
+          <div class="defender-side">
+            <div class="element-combo-badge wind-combo">🌪️</div>
+            <h3>Wind</h3>
+            <p class="combo-name">Swift Striker</p>
+          </div>
         </div>
-        <div class="matchup-result unfavorable">
-          <p><strong>Wind Resistance:</strong> Movement breaks shadow bonds.</p>
-          <p class="matchup-desc">Wind warriors evade Shadow attacks more easily</p>
-          <div class="advantage-indicator">
-            <span class="advantage-label">Disadvantage:</span>
-            <span class="advantage-value">-10%</span>
+
+        <div class="comparison-body">
+          <div class="disadvantage-section">
+            <h4>Disadvantage</h4>
+            <p class="disadvantage-title">Wind Disperses Shadow</p>
+            <p class="disadvantage-desc">Shadow techniques are easily countered by wind agility.</p>
+            
+            <div class="stat-comparison">
+              <div class="stat-item">
+                <span class="stat-label">Mobility Penalty</span>
+                <div class="stat-bar">
+                  <div class="stat-fill" style="width: 50%;"></div>
+                </div>
+                <span class="stat-value">-10%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ability-list">
+            <h4>Key Disadvantages</h4>
+            <ul>
+              <li>• Stealth ineffective</li>
+              <li>• Quick escapes limited</li>
+              <li>• Shadow dispersal</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comparison-footer">
+          <span class="result-badge unfavorable-result">UNFAVORABLE</span>
+          <span class="matchup-odds">40% Win Rate</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MATCHUP LEGEND -->
+    <div class="matchup-legend">
+      <h3>Understanding Matchups</h3>
+      <div class="legend-items">
+        <div class="legend-item favorable-legend">
+          <span class="legend-icon">✅</span>
+          <div>
+            <strong>Favorable Matchups</strong>
+            <p>Your element has strategic advantage. Higher win rate expected.</p>
+          </div>
+        </div>
+        <div class="legend-item unfavorable-legend">
+          <span class="legend-icon">❌</span>
+          <div>
+            <strong>Unfavorable Matchups</strong>
+            <p>Opponent element has advantage. Requires skill to overcome.</p>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
