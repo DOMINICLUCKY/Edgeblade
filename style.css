@@ -1598,20 +1598,29 @@ body::before {
 .matchup-vs {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 20px;
-  gap: 10px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .element-indicator {
-  flex: 1;
+  flex: 0 1 120px;
   padding: 12px;
   border-radius: 8px;
   text-align: center;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   background: rgba(100, 100, 120, 0.3);
   border: 1px solid rgba(100, 100, 120, 0.5);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  word-break: keep-all;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .element-indicator.flame {
@@ -5265,17 +5274,27 @@ button, a, input, select, textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   margin: 10px 0;
   font-weight: 700;
+  flex-wrap: wrap;
 }
 
 .matchup-card .element-indicator {
-  font-size: 1.5rem;
-  padding: 10px 15px;
+  font-size: 0.9rem;
+  padding: 10px 12px;
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 99, 71, 0.3);
+  flex: 0 1 140px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  word-break: keep-all;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .matchup-card .vs-text {
