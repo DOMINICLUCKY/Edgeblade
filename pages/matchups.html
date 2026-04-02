@@ -46,11 +46,27 @@
 <!-- ELEMENT MATCHUPS PAGE -->
 <section class="page matchups-page">
   <div class="matchups-container">
-    <h2 class="matchups-title">ELEMENT MATCHUPS</h2>
-    <p class="section-subtitle">Discover favorable and unfavorable elemental combinations</p>
+    <div class="matchups-header">
+      <h2 class="matchups-title">ELEMENT MATCHUPS</h2>
+      <p class="section-subtitle">Discover favorable and unfavorable elemental combinations</p>
+    </div>
+
+    <!-- MATCHUP FILTERS -->
+    <div class="matchup-filters">
+      <button class="matchup-filter-btn active" data-filter="all">
+        <span class="filter-icon">⚔️</span> All Matchups
+      </button>
+      <button class="matchup-filter-btn" data-filter="favorable">
+        <span class="filter-icon">✅</span> Favorable Only
+      </button>
+      <button class="matchup-filter-btn" data-filter="unfavorable">
+        <span class="filter-icon">❌</span> Unfavorable Only
+      </button>
+    </div>
     
     <div class="matchups-grid">
-      <div class="matchup-card">
+      <div class="matchup-card" data-matchup="favorable">
+        <div class="matchup-badge favorable-badge">✅ FAVORABLE</div>
         <div class="matchup-vs">
           <div class="element-indicator flame">🔥 Flame</div>
           <span class="vs-text">vs</span>
@@ -59,10 +75,15 @@
         <div class="matchup-result favorable">
           <p><strong>Flame Advantage:</strong> Fire feeds on oxygen, spreads through wind.</p>
           <p class="matchup-desc">Ignition deals +20% damage to Wind warriors</p>
+          <div class="advantage-indicator">
+            <span class="advantage-label">Advantage:</span>
+            <span class="advantage-value">+20%</span>
+          </div>
         </div>
       </div>
 
-      <div class="matchup-card">
+      <div class="matchup-card" data-matchup="favorable">
+        <div class="matchup-badge favorable-badge">✅ FAVORABLE</div>
         <div class="matchup-vs">
           <div class="element-indicator wind">🌪️ Wind</div>
           <span class="vs-text">vs</span>
@@ -71,10 +92,15 @@
         <div class="matchup-result favorable">
           <p><strong>Wind Advantage:</strong> Swift strikes pierce through darkness.</p>
           <p class="matchup-desc">Speed bonus against Shadow warriors</p>
+          <div class="advantage-indicator">
+            <span class="advantage-label">Advantage:</span>
+            <span class="advantage-value">+15%</span>
+          </div>
         </div>
       </div>
 
-      <div class="matchup-card">
+      <div class="matchup-card" data-matchup="favorable">
+        <div class="matchup-badge favorable-badge">✅ FAVORABLE</div>
         <div class="matchup-vs">
           <div class="element-indicator shadow">🌑 Shadow</div>
           <span class="vs-text">vs</span>
@@ -83,10 +109,15 @@
         <div class="matchup-result favorable">
           <p><strong>Shadow Advantage:</strong> Darkness extinguishes light.</p>
           <p class="matchup-desc">Silencing effects paralyze Fire warriors</p>
+          <div class="advantage-indicator">
+            <span class="advantage-label">Advantage:</span>
+            <span class="advantage-value">+25%</span>
+          </div>
         </div>
       </div>
 
-      <div class="matchup-card">
+      <div class="matchup-card" data-matchup="unfavorable">
+        <div class="matchup-badge unfavorable-badge">❌ UNFAVORABLE</div>
         <div class="matchup-vs">
           <div class="element-indicator flame">🔥 Flame</div>
           <span class="vs-text">vs</span>
@@ -95,10 +126,15 @@
         <div class="matchup-result unfavorable">
           <p><strong>Shadow Resistance:</strong> Darkness swallows flames.</p>
           <p class="matchup-desc">Shadow warriors resist -15% flame damage</p>
+          <div class="advantage-indicator">
+            <span class="advantage-label">Disadvantage:</span>
+            <span class="advantage-value">-15%</span>
+          </div>
         </div>
       </div>
 
-      <div class="matchup-card">
+      <div class="matchup-card" data-matchup="unfavorable">
+        <div class="matchup-badge unfavorable-badge">❌ UNFAVORABLE</div>
         <div class="matchup-vs">
           <div class="element-indicator wind">🌪️ Wind</div>
           <span class="vs-text">vs</span>
@@ -107,10 +143,15 @@
         <div class="matchup-result unfavorable">
           <p><strong>Flame Resistance:</strong> Heat strengthens infernos.</p>
           <p class="matchup-desc">Wind attacks weakened against Fire warriors</p>
+          <div class="advantage-indicator">
+            <span class="advantage-label">Disadvantage:</span>
+            <span class="advantage-value">-20%</span>
+          </div>
         </div>
       </div>
 
-      <div class="matchup-card">
+      <div class="matchup-card" data-matchup="unfavorable">
+        <div class="matchup-badge unfavorable-badge">❌ UNFAVORABLE</div>
         <div class="matchup-vs">
           <div class="element-indicator shadow">🌑 Shadow</div>
           <span class="vs-text">vs</span>
@@ -119,6 +160,10 @@
         <div class="matchup-result unfavorable">
           <p><strong>Wind Resistance:</strong> Movement breaks shadow bonds.</p>
           <p class="matchup-desc">Wind warriors evade Shadow attacks more easily</p>
+          <div class="advantage-indicator">
+            <span class="advantage-label">Disadvantage:</span>
+            <span class="advantage-value">-10%</span>
+          </div>
         </div>
       </div>
     </div>
@@ -131,6 +176,7 @@
 </footer>
 
 <script src="../js/menu.js"></script>
+<script src="../js/matchups.js"></script>
 
 </body>
 </html>
